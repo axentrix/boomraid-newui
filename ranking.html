@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+
+<head>    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="apple-touch-icon" href="images/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="images/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="images/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+
+    <link rel="mask-icon" href="images/favicons/safari-pinned-tab.svg" color="#F57F20">
+    <link rel="icon" href="images/favicons/favicon.ico">
+
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+    <h2>Ч.Р.Д Никола</h2>
+
+    <table class="table table-striped" id="rankingTable">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Име</th>
+                <th scope="col">Точки</th>
+                <th scope="col">П. решение</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr> -->
+        </tbody>
+    </table>    
+</body>
+
+
+<script>
+
+    async function getData(ajaxurl) {
+
+        try {
+            let result = await $.ajax({
+                url: ajaxurl,
+                type: 'GET',
+            });
+
+            return result;
+
+        } catch (err) {
+            console.log(err);
+        }
+    };
+
+</script>
+
+
+<script>
+
+    function calculateTotalPoints(teamData) {
+
+        let totalPoints = 0;
+
+        let pointsTable = {
+            1: 1,
+            2: 1,
+            3: 1,
+            4: 1,
+            5: 2,
+            6: 2,
+            7: 2,
+            8: 2,
+            9: 3,
+            10: 3
+        };
+
+        for (const [key, value] of Object.entries(teamData.details)) {
+         
+            if (value.solved === true && value.skipped === false) {
+
+                if (value.hintUsed === false) {
+                    totalPoints += pointsTable[key];
+                } else {
+                    totalPoints += pointsTable[key] / 2;
+                }
+
+            }
+        }
+        return totalPoints;
+    }
+
+</script>
+
+<script>
+    let teamsData = [
+        { id: 'tccrsmg', name: 'Отбор 1', totalPoints: 0, lastCorrectAnswerTimestamp: false },
+        { id: 'kzpwovv', name: 'Отбор 2', totalPoints: 0, lastCorrectAnswerTimestamp: false },
+        { id: 'hbqgqyg', name: 'Отбор 3', totalPoints: 0, lastCorrectAnswerTimestamp: false },
+        { id: 'ttbqkux', name: 'Отбор 4', totalPoints: 0, lastCorrectAnswerTimestamp: false },
+        { id: 'tynmrdo', name: 'Отбор 5', totalPoints: 0, lastCorrectAnswerTimestamp: false },
+        { id: 'yqpyurx', name: 'Отбор 6', totalPoints: 0, lastCorrectAnswerTimestamp: false },
+    ];
+</script>
+
+
+<script>
+    (async function () {
+                
+        for (let step = 0; step < teamsData.length; step++) {
+
+            let currentTeam = teamsData[step];
+
+            let ajaxResult = await getData(`https://app.boomraid.bg/bgkbg/game/${currentTeam.id}/data`);
+
+            let totalPoints = calculateTotalPoints(ajaxResult.data);
+
+
+            currentTeam.totalPoints = totalPoints;
+            currentTeam.lastCorrectAnswerTimestamp = ajaxResult.data.lastCorrectAnswerTimestamp;
+        }
+
+
+        let teamsDataSorted = [...teamsData].sort(function (a, b) {
+
+            if (a.totalPoints > b.totalPoints) {
+                return -1;
+            }
+
+            if (a.totalPoints < b.totalPoints) {
+                return 1;
+            }
+
+            if (new Date(a.lastCorrectAnswerTimestamp) > new Date(b.lastCorrectAnswerTimestamp)) {
+                return 1
+            }
+
+            if (new Date(a.lastCorrectAnswerTimestamp) < new Date(b.lastCorrectAnswerTimestamp)) {
+                return -1
+            }
+            
+            return 0;
+        });
+
+
+        for (let step = 0; step < teamsDataSorted.length; step++) {
+
+            let currentTeam = teamsDataSorted[step];
+                
+            $("#rankingTable").append(
+                `<tr>
+                    <th scope="row">${step + 1}</th>
+                    <td>${currentTeam.name}</td>
+                    <td>${currentTeam.totalPoints}</td>
+                    <td>${currentTeam.lastCorrectAnswerTimestamp ? currentTeam.lastCorrectAnswerTimestamp.split('.')[0] : '-'}</td>
+                </tr>`
+            );
+        }
+    })();
+    
+</script>
+
+</html>

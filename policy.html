@@ -1,0 +1,302 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <meta property="og:image" content="https://boomraid.bg/images/logo-02.jpg"/>
+    <meta property="og:url" content="https://boomraid.bg"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="BoomRaid&trade; Градска Приключенска Игра"/>
+    <meta property="og:description" content="Един град. Три часа. Осем скрити адски машини. Ще успееш ли?"/>
+    <title>BoomRaid&trade; градска приключенска игра, която предизвиква участниците да решават загадки</title>
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-165398260-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-165398260-1');
+        gtag('config', 'AW-1042091529');
+    </script>
+
+    <script src="https://browser.sentry-cdn.com/5.27.1/bundle.min.js" crossorigin="anonymous"></script>
+
+    <script>
+        Sentry.init({ dsn: 'https://76786958e492403e8f2eb763a6c0de2d@o423335.ingest.sentry.io/5353377'});
+    </script>
+
+
+    <script src="js/3.5.1_jquery.min.js"></script>
+    <script src="js/1.16.0_popper.min.js"></script>
+    <script src="js/4.19.1_mdb.min.js"></script>
+    <script src="js/4.5.0_bootstrap.min.js"></script>
+    <script src="js/material-components-web.min.js"></script>
+    <script src="js/1.19.2_jquery.validate.min.js"></script>
+    <script src="js/2.3.1_aos.js"></script>
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+
+
+    <!-- material design-->
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.12.0/css/mdb.min.css" />
+
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="images/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="images/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="images/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+
+    <link rel="mask-icon" href="images/favicons/safari-pinned-tab.svg" color="#F57F20">
+    <link rel="icon" href="images/favicons/favicon.ico">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Custom styles from Anna -->
+    <link href="css/start.css" rel="stylesheet">
+
+</head>
+<body  id="innerPage">
+
+<header class="header header-box-shadow-on-scroll header-abs-top header-bg-transparent header-show-hide" id="header">
+    <div class="header-section" data-aos="menu-area" data-aos-anchor-placement="bottom-top">
+
+        <div class="container" id="logoAndNav">
+
+            <nav class="navbar navbar-expand-lg" role="navigation">
+                <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navBar" aria-controls="navBar" aria-expanded="false" aria-label="Toggle navigation">
+                    <div id="nav-icon">
+                        <span></span><span></span><span></span>
+                    </div>
+                </button>
+
+                <a class="navbar-brand" href="index.html" style="padding:10px 0px 2px 0px;"><img border=0 src="images/logo.svg" height="100%"></a>
+
+
+                <div id="navBar" class="navbar-collapse">
+
+                    <div class="navbar-nav ml-auto">
+
+                        <ul class="navbar-nav">
+
+                            <li class="nav-item"><a href="faq.html">Често задавани въпроси</a></li>
+                            <li class="nav-item"><a href="contact.html">Контакти</a></li>
+                            <li class="nav-item dropdown">
+                                <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
+                                    Плати игра
+                                </a>
+                                <ul class="dropdown-menu dropdown-user">
+                                    <li>
+                                        <a href="sofia-payment.html">София</a>
+                                    </li>
+                                    <li>
+                                        <a href="plovdiv-payment.html">Пловдив</a>
+                                    </li>
+                                    <li>
+                                        <a href="varna-payment.html">Варна</a>
+                                    </li>
+                                    <li>
+                                        <a href="burgas-payment.html">Бургас</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+            </nav>
+        </div>
+    </div>
+
+
+
+
+
+</header>
+
+
+<main>
+    <div class="container">
+
+        <div class="row justify-content-center">
+            <div class="col-md-8 ">
+                <div class="card p-4 mb-6">
+                    <h2 class="mt-2">Политика за лични данни</h2>
+
+
+                    <div class="text" id="terms">
+                        <p>BoomRaid гарантира на своите Потребители/клиенти конфиденциалността на предоставената информация и лични данни. Последните няма да бъдат използвани, предоставяни или довеждани до знанието на трети лица извън случаите и при условията, посочени в настоящите Общи условия.</p>
+
+                        <p>BoomRaid защитава личните данни на потребителя/клиента, станали му известни при попълване на електронната форма за извършване на заявление за покупка. При спазване на действащото законодателство и клаузите на настоящите Общи условия, BoomRaid може да използва личните данни на Клиента единствено и само за целите, предвидени в Общите условия. Всякакви други цели, за които се използват данните, ще бъдат съобразени с българското законодателство, приложимите международни актове и GDPR.</p>
+
+                        <p>BoomRaid се задължава да не разкрива никакви лични данни за Клиента на трети лица - държавни органи, търговски дружества, физически лица и други, освен в случаите когато е получил изричното писмено съгласие на Клиента, информацията е изискана от държавни органи или длъжностни лица, които според действащото законодателство са оправомощени да изискват и събират такава информация. BoomRaid е длъжен да предостави информацията по силата на закона.</p>
+
+                        <p>От 25/05/2018 за всички граждани на Европейския съюз влиза в сила новият регламент за защита на личните данни GDPR (General Data Protection Regulation).</p>
+
+                        <p><strong>Политика за защита на личните данни</strong><br>
+                            Поверителността и сигурността на личните данни на нашите клиенти винаги е била от първостепенно значение за нас. Поради тази причина създадохме настоящата Политика за защита на личните данни, която обхваща начина, по който събираме, използваме, съхраняваме, разкриваме и изтриваме, или най-общо „обработваме“, данните Ви. Политика за защита на личните данни ни позволява да осигурим високо ниво на защита на всички ползватели на играта BoomRaid.
+                            Вашите данни, предоставени при закупуването на игра, ще бъдат записани в единна защитена и отдалечена база данни и в тази връзка предоставянето на съгласие с Общите условия, неразделна част от които е настоящата Политика за защита на личните данни.</p>
+
+                        <p><strong>Събиране и използване на лични данни</strong><br>
+                            Лични данни са всяка информация, която може да бъде използвана за идентифициране на дадено лице. Възможно е да Ви бъде поискана лична информация всеки път, щом влезете във връзка с нас или с наши партньори с оглед предоставянето на продуктите и услугите ни. Единствено при спазването на настоящата Политика за защита на личните данни и всички приложими законови разпоредби BoomRaid и неговите партньори могат да споделят тази информация помежду си и да я използват. Вашите лични данни се обработват единствено на територията на ЕС, само за срока и за целите, за които са предоставени.</p>
+
+                        <p><strong>Какви лични данни събираме</strong><br>
+                            Събираме <i>единствено</i> вашият имейл. В случаите, в които е необходимо издаването на определени документи, например фактура, е възможно да Ви бъдат поискани и допълнителни данни съгласно изискванията на нормативната уредба.
+                            Съхраняваме история на поръчките, направени от всеки закупил игра BoomRaid.</p>
+
+                        <p><strong>Как използваме личните данни</strong><br>
+                            Използваме личните Ви данни за да изпращаме важни съобщения за старт на игра, информация за плащане, специфики на услугата, промени в Общите условия или други правила.
+                            В случай, че сте заявили съгласие, обработваме Вашите данни за да Ви информираме за допълнителни услуги в резултат от Играта. Веднъж заявено съгласие по всяко време може да бъде оттеглено. В случай, че сте заявили съгласие за участие в определени събития обработваме предоставените ни от Вас данни, за да администрираме тези активности.</p>
+
+                        <p><strong>Разкриване пред трети страни</strong><br>
+                            Не споделяме вашите лични данни (имейл) с трети страни. В дадени случаи, с цел изпълнението на заковови задължения е необходимо или ще бъдем задължени да разкриваме предоставени от Вас лични данни пред компетентни органи.
+                            Уеб сайтът съхранява cookies и log файлове с цел персонализиране и подобряване на услугите си. Също така се използват инструменти като Google Analytics и др. с помощта на който може лесно да отчита и да следи за поведението на потребителите си.</p>
+
+                        <p><strong>Защита на личните данни</strong><br>
+                            BoomRaid взима предпазни мерки, включващи административни, технически и физически мерки, за да защити личните ви данни от загуба, кражба и злоупотреба, както и от неоторизиран достъп, разкриване, промяна или унищожаване.</p>
+
+                        <p><strong>Цялост и задържане на личните данни</strong><br>
+                            Ще задържим личните Ви данни за период, необходим за изпълнението на конкретната цел, за която същите се обработват и според законовите срокове и периода на действие на законовите разпоредви отнасящи се до предмета на дейност, след което ще бъдат изтрити, освен ако нормативен акт изисква да ги задържим за по-дълъг период.</p>
+
+                        <p><strong>Права на субекта на лични данни</strong><br>
+                            Можете да проверите точността, пълнотата и актуалността на личните си данни, както и да ги коригирате, като изисквате това чрез писмо на нашата електронна поща. Ако искате да оттеглите съгласието си за обработване на лични данни, да заявите корекция, да възразите срещу тяхното обработване или да поискате данните Ви да бъдат изтрити („правото да бъдеш забравен“), следва да изпратите искане на формата за контакт на този сайт.</p>
+
+                        <p><strong>Маркетинг</strong><br>
+                            Стремим се да Ви предоставим възможност за избор на определени лични данни, особено по отношение на маркетинга и рекламата.</p>
+
+                        <p><strong>Промоционални оферти</strong><br>
+                            Можем да използваме вашите лични данни, контакт, техническа информация, употреба и данни за профила, за да преценим и да ви предложим само това, което ви интересува. Можете по всяко време да се откажете от маркетинговите съобщения, като отговорите на самите тях. Ще получите маркетингови съобщения от нас, ако сте поискали информация от нас или сте закупили продукт или услуги от нас и във всеки случай не сте се отказали от получаването на този маркетинг.</p>
+
+                        <p><strong>Искания относно лични данни</strong><br>
+                            На подадени искания относно лични данни ще бъде отговорено в едномесечен срок, а в случай на необходимост от удължаване на посочения срок ще бъдете информирани за удължаването, както и за причините за забавянето. Можем да откажем да обработваме искания, които се повтарят неоснователно или застрашават поверителността на други потребители.</p>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+
+</main>
+
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="row d-flex justify-content-between">
+            <div class="col-md-4">
+                <h4 class="pt-6">Кога ще излезе нещо ново...</h4><div class="textwidget custom-html-widget">
+                <div class="hs-newsletter">
+
+
+                    <div class="hbspt-form">
+                        <form novalidate="" accept-charset="UTF-8" action="" class="hs-form">
+                            <div class="inputholder md-form">
+                                <input type="email" class="form-control" id="youremail" value="" autocomplete="email">
+                                <label id="maillabel" for="youremail">Въведи мейл адрес</label>
+                                <input type="submit" value="Изпрати" id="subscribe" class="hs-button btn-primary">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <div id="footer-menus" class="col-md-8 pt-6 d-flex justify-content-end">
+                <div class="col-md-4">
+
+                    <h4 class="widget-title">За BoomRaid<sup>TM</sup></h4>
+                    <ul>
+                        <li><a href="faq.html">Често задавани въпроси</a></li>
+                        <li><a href="instructions.html">Правила на играта</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+
+                    <h4 class="widget-title">За нас</h4>
+                    <ul>
+                        <li><a href="about.html">Кои сме ние</a></li>
+                        <li><a href="contact.html">Контакти</a></li>
+                        <li><a href="https://www.facebook.com/BoomRaidBG"><i class="fab fa-facebook"></i></a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <div class="footer-bottom  pt-3 pb-3">
+        <div class="container d-flex justify-content-between">
+            <div class="copyright">
+
+                © 2021 Boomraid All rights reserved.
+
+            </div>
+            <div class="terms">
+                <a href="policy.html">Политика за лични данни</a> |
+                <a href="terms.html">Условия за ползване</a>
+
+            </div>
+        </div>
+    </div>
+    <!-- .site-info -->
+</footer>
+
+
+
+
+<script>
+    function validateEmail(email) {
+        var re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+        return re.test(email);
+    }
+</script>
+
+
+<script>
+    var subscribe = document.querySelector('#subscribe');
+
+    subscribe.addEventListener('click', function(event) {
+        event.preventDefault();
+
+        var email = $('#youremail').val().toLowerCase().trim();
+
+        if(!validateEmail(email)) {
+            alert('Невалиден адрес');
+        } else {
+            $.ajax({
+                crossOrigin: true,
+                type: 'POST',
+                url: "https://utils.boomraid.bg/email",
+                data: JSON.stringify ({email: email}),
+                success: function() {
+                    $(subscribe).attr("disabled", true);
+                    $(subscribe).css("background-image", "linear-gradient(gray, gray)");
+                    $('#youremail').val('').blur();
+                    $('#maillabel').html('Благодаря')
+                },
+                error: function(error) { alert('failure: ' + JSON.stringify(error)); },
+                contentType: "application/json",
+                dataType: 'json'
+            });
+        }
+    });
+</script>
+
+
+</body>
+</html>

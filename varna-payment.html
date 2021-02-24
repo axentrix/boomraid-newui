@@ -1,0 +1,651 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+
+    <meta property="og:image" content="https://boomraid.bg/images/logo-02.jpg" />
+    <meta property="og:url" content="https://boomraid.bg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="BoomRaid&trade; Градска Приключенска Игра" />
+    <meta property="og:description" content="Един град. Три часа. Осем скрити адски машини. Ще успееш ли?" />
+
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src *; 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://js.stripe.com"> -->
+
+
+
+    <title>BoomRaid&trade; градска приключенска игра, която предизвиква участниците да решават загадки</title>
+    <!-- Bootstrap core CSS -->
+
+
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-165398260-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-165398260-1');
+        gtag('config', 'AW-1042091529');
+    </script> -->
+
+    <!-- <script src="https://browser.sentry-cdn.com/5.27.1/bundle.min.js" crossorigin="anonymous"></script> -->
+
+    <script src="https://js.stripe.com/v3"></script>
+
+    <!-- <script>
+        Sentry.init({ dsn: 'https://76786958e492403e8f2eb763a6c0de2d@o423335.ingest.sentry.io/5353377' });
+    </script> -->
+
+    <script src="js/3.5.1_jquery.min.js"></script>
+    <script src="js/1.16.0_popper.min.js"></script>
+    <script src="js/4.19.1_mdb.min.js"></script>
+    <script src="js/4.5.0_bootstrap.min.js"></script>
+    <script src="js/material-components-web.min.js"></script>
+    <script src="js/1.19.2_jquery.validate.min.js"></script>
+
+    <!-- <script src="js/2.3.1_aos.js"></script> -->
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+
+
+    <!-- material design-->
+
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.12.0/css/mdb.min.css" />
+
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="images/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="images/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="images/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+
+    <link rel="mask-icon" href="images/favicons/safari-pinned-tab.svg" color="#F57F20">
+    <link rel="icon" href="images/favicons/favicon.ico">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Custom styles from Anna -->
+    <link href="css/start.css" rel="stylesheet">
+    <link href="css/stripe2.css" rel="stylesheet">
+    <!-- <link href="css/global.css" rel="stylesheet"> -->
+
+</head>
+
+<body id="innerPage">
+
+
+
+    <header class="header header-box-shadow-on-scroll header-abs-top header-bg-transparent header-show-hide"
+        id="header">
+        <div class="header-section" data-aos="menu-area" data-aos-anchor-placement="bottom-top">
+
+            <div class="container" id="logoAndNav">
+
+                <nav class="navbar navbar-expand-lg" role="navigation">
+                    <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse"
+                        data-target="#navBar" aria-controls="navBar" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <div id="nav-icon">
+                            <span></span><span></span><span></span>
+                        </div>
+                    </button>
+
+                    <a class="navbar-brand" href="index.html" style="padding:10px 0px 2px 0px;"><img border=0
+                            src="images/logo.svg" height="100%"></a>
+
+
+                    <div id="navBar" class="navbar-collapse">
+
+                        <div class="navbar-nav ml-auto">
+
+                            <ul class="navbar-nav">
+
+                                <li class="nav-item"><a href="faq.html">Често задавани въпроси</a></li>
+                                <li class="nav-item"><a href="contact.html">Контакти</a></li>
+                                <li class="nav-item dropdown">
+                                    <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
+                                        Плати игра
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-user">
+                                        <li>
+                                            <a href="sofia-payment.html">София</a>
+                                        </li>
+                                        <li>
+                                            <a href="plovdiv-payment.html">Пловдив</a>
+                                        </li>
+                                        <li>
+                                            <a href="varna-payment.html">Варна</a>
+                                        </li>
+                                        <li>
+                                            <a href="burgas-payment.html">Бургас</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                </nav>
+            </div>
+        </div>
+
+    </header>
+
+
+    <main>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 ">
+                    <div id="payment-box" class="card p-4 mb-6">
+                        <h2 id="pay-status" class="mt-2">Плати игра във Варна</h2>
+                        <div class="text d-flex justify-content-end d-column" id="payment">
+
+
+                            <div class="inputholder discount md-form w-100 d-flex">
+                                <form>
+                                    <input type="text" class="form-control" id="discountCode" value="">
+                                    <label for="discountCode">Код за отстъпка</label>
+                                    <input type="submit" value="OK" class="btn btn-secondary btn-discount"
+                                        id="discountButton">
+                                </form>
+                            </div>
+
+                            <div class="w-100 d-flex">
+                                <table width="100%">
+                                    <tr>
+
+                                        <td>
+                                            BoomRaid™ Варна:
+                                        </td>
+
+                                        <td>
+                                            60.00 Лева
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Отстъпка:</td>
+                                        <td id="discountAmount">0.00 Лева</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h4>ОБЩО:</h4>
+                                        </td>
+                                        <td>
+                                            <h4 id="finalPrice">60.00 Лева</h4>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+
+
+                        <br>
+                        <br>
+
+
+                        <form class="form" id="payment-form">
+                            <div class="group">
+                                <label class="label">
+                                    <span>Name</span>
+                                    <input id="name" type="name" class="field" placeholder="Пипи Дългото Чорапче" />
+                                </label>
+                                <label class="label">
+                                    <span>Email</span>
+                                    <input id="email" type="email" class="field" placeholder="test@example.com" />
+                                </label>
+                                <label class="label">
+                                    <span>Card</span>
+                                    <div id="card-element" class="field"></div>
+                                </label>
+                            </div>
+
+                            <button class="button" type="submit">
+                                <div class="spinner hidden" id="spinner"></div>
+                                <span id="button-text">Плати 60.00 Лева  <i class="fab fa-cc-stripe fa-lg"></i></span>
+                            </button>
+                            <div class="outcome">
+                                <div class="error"></div>
+                                <div class="success"></div>
+                            </div>
+                        </form>
+
+
+                        <p class="result-message hidden">
+                            <br>
+                            <br>
+                            Плащането е успешно 🎉 Благодаря ти 🙏<br>
+                            Изпратихме линк и инструкции за стартиране на мейла ти.<br><br>
+                            Ако желаеш да стартираш играта веднага натисни
+                            <a href="" target="_blank">тук.</a><br><br>
+                            <i>(Ако искаш да направиш друго плащане зареди тази страница отново)</i>
+                        </p>
+
+
+                        <!-- <div class="col-md-6 mt-4 payment justify-content-end ml-auto"> -->
+
+
+
+
+
+                            <!-- <div id="paypal-button-container"></div> -->
+
+
+                            <script>
+
+                                var gamePrice = '30.00';
+                                var gameDiscountCode;
+
+//                         
+                            </script>
+                        <!-- </div> -->
+
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card darkbg mb-3">
+                        <div class="text p-4">
+                            Пълната игра включва 8 загадки, 3 часа време за игра и неограничен брой участници които
+                            могат да играят.
+
+                            <br><br>Приемаме плащания с всички кредитни и дебитни карти като използваме <a href="https://stripe.com">Stripe</a>.<br>
+
+                            След успешно плащане с кредитна/дебирна карта на тази страница ще генерираме линк за старт.
+                            Можеш да започнеш играта <i>веднага</i> или да подариш линка на приятел.
+                            <br><br><strong>Използвай валиден мейл адрес. На него също ще изпратим линка за започване и
+                                разписка от плащането. Ако не намериш нашето съобщение провери в SPAM папката.</strong>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row d-flex justify-content-between">
+                <div class="col-md-4">
+                    <h4 class="pt-6">Кога ще излезе нещо ново...</h4>
+                    <div class="textwidget custom-html-widget">
+                        <div class="hs-newsletter">
+
+
+                            <div class="hbspt-form">
+                                <form novalidate="" accept-charset="UTF-8" action="" class="hs-form">
+                                    <div class="inputholder md-form">
+                                        <input type="email" class="form-control" id="youremail" value=""
+                                            autocomplete="email">
+                                        <label id="maillabel" for="youremail">Въведи мейл адрес</label>
+                                        <input type="submit" value="Изпрати" id="subscribe"
+                                            class="hs-button btn-primary">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="footer-menus" class="col-md-8 pt-6 d-flex justify-content-end">
+                    <div class="col-md-4">
+
+                        <h4 class="widget-title">За BoomRaid<sup>TM</sup></h4>
+                        <ul>
+                            <li><a href="faq.html">Често задавани въпроси</a></li>
+                            <li><a href="instructions.html">Правила на играта</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-4">
+
+                        <h4 class="widget-title">За нас</h4>
+                        <ul>
+                            <li><a href="about.html">Кои сме ние</a></li>
+                            <li><a href="contact.html">Контакти</a></li>
+                            <li><a href="https://www.facebook.com/BoomRaidBG"><i class="fab fa-facebook"></i></a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
+
+        <div class="footer-bottom  pt-3 pb-3">
+            <div class="container d-flex justify-content-between">
+                <div class="copyright">
+
+                    © 2021 Boomraid All rights reserved.
+
+                </div>
+                <div class="terms">
+                    <a href="policy.html">Политика за лични данни</a> |
+                    <a href="terms.html">Условия за ползване</a>
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- .site-info -->
+    </footer>
+
+
+
+
+    <script>
+        function validateEmail(email) {
+            var re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+            return re.test(email);
+        }
+    </script>
+
+
+
+    <script>
+        var subscribe = document.querySelector('#subscribe');
+
+        subscribe.addEventListener('click', function (event) {
+            event.preventDefault();
+
+            var email = $('#youremail').val().toLowerCase().trim();
+
+            if (!validateEmail(email)) {
+                alert('Invalid Mail');
+            } else {
+                $.ajax({
+                    crossOrigin: true,
+                    type: 'POST',
+                    url: "https://utils.boomraid.bg/email",
+                    data: JSON.stringify({ email: email }),
+                    success: function () {
+
+                        $(subscribe).attr("disabled", true);
+                        $(subscribe).css("background-image", "linear-gradient(gray, gray)");
+                        $('#youremail').val('').blur();
+                    },
+                    error: function (error) { alert('failure: ' + JSON.stringify(error)); },
+                    contentType: "application/json",
+                    dataType: 'json'
+                });
+            }
+        });
+    </script>
+
+
+
+    <script>
+
+        var loading = function (isLoading) {
+            if (isLoading) {
+                // Disable the button and show a spinner
+                document.querySelector(".button").disabled = true;
+                $("#spinner").show();
+                $("#button-text").hide();
+            } else {
+                document.querySelector(".button").disabled = false;
+                $("#spinner").hide();
+                $("#button-text").show();
+            }
+        };
+
+    </script>
+
+    <script>
+        
+        var stripe = Stripe('pk_live_51I9SjIGpvXEjp4nRqAr1iGwN3J7MQ0QZD5rTGuVyjZTHMwS2tSpl0zScq2vCWTfM1CpKmIKYKC5Lnkyvs9uhtKDl00kFi61ik1');
+        
+        var elements = stripe.elements();
+
+
+        loading(false);
+
+        document.querySelector(".button").disabled = true;
+
+        var card = elements.create('card', {
+            style: {
+                base: {
+                    iconColor: '#666EE8',
+                    color: '#31325F',
+                    lineHeight: '40px',
+                    fontWeight: 300,
+                    fontFamily: 'Helvetica Neue',
+                    fontSize: '15px',
+
+                    '::placeholder': {
+                        color: '#CFD7E0',
+                    },
+                },
+            }
+        });
+        card.mount('#card-element');
+
+        function setOutcome(result) {
+            loading(false);
+            var successElement = document.querySelector('.success');
+            var errorElement = document.querySelector('.error');
+            successElement.classList.remove('visible');
+            errorElement.classList.remove('visible');
+
+            if (result.token) {
+                // Use the token to create a charge or a customer
+                // https://stripe.com/docs/charges
+                successElement.querySelector('.token').textContent = result.token.id;
+                successElement.classList.add('visible');
+            } else if (result.error) {
+                errorElement.textContent = result.error.message;
+                errorElement.classList.add('visible');
+            }
+        }
+
+        card.on('change', function (event) {
+            document.querySelector(".button").disabled = event.empty;
+            setOutcome(event);
+        });
+
+        document.querySelector('#payment-form').addEventListener('submit', function (e) {
+
+
+
+            var errorElement = document.querySelector('.error');
+
+            errorElement.classList.remove('visible');
+
+            e.preventDefault();
+            var name = document.getElementById('name').value;
+
+            if (!name) {
+                loading(false);
+                errorElement.textContent = "You must enter a name.";
+                errorElement.classList.add('visible');
+                return;
+            }
+            var email = document.getElementById('email').value;
+            if (!email) {
+                loading(false);
+                errorElement.textContent = "You must enter an email.";
+                errorElement.classList.add('visible');
+                return;
+            }
+            var options = {
+                name: name,
+                email: email
+            };
+
+
+            loading(true);
+
+            $.ajax({
+                crossOrigin: false,
+                type: 'GET',
+                url: 'https://app.boomraid.bg/varbg/discount/' + gameDiscountCode + '/clientsecret',
+                success: function (data) {
+
+                    var clientSecret = data.client_secret;
+
+                    stripe.confirmCardPayment(clientSecret, {
+                        payment_method: {
+                            card: card,
+                            billing_details: options
+                        },
+                        receipt_email: email
+                    }).then(function (result) {
+                        if (result.error) {
+                            // Show error to your customer (e.g., insufficient funds)
+                            // console.log(result.error.message);
+
+                            loading(false);
+                            var errorElement = document.querySelector('.error');
+                            errorElement.textContent = result.error.message;
+                            errorElement.classList.add('visible');
+
+                        } else {
+                            // The payment has been processed!
+                            if (result.paymentIntent.status === 'succeeded') {
+                                
+                                $.ajax({
+                                    crossOrigin: false,
+                                    type: 'POST',
+                                    url: 'https://app.boomraid.bg/varbg/checkpaymentintent',
+                                    data: JSON.stringify({
+                                        paymentIntentId: result.paymentIntent.id                                        
+                                    }),
+                                    success: function (result) {
+                                        
+                                        if (result.result === 'OK') {
+                                        
+                                            $(".result-message a").attr("href", result.startURL);
+                                            $("#payment-form").hide();
+                                            $(discountButton).attr("disabled", true);
+                                            $(".result-message").show()                                            
+                                        }
+
+                                        else {
+                                            var errorElement = document.querySelector('.error');
+                                            errorElement.textContent = result.error;
+                                            errorElement.classList.add('visible');
+                                        }                                        
+                                    },
+                                    error: function (error) {
+                                        loading(false);
+                                        alert('failure: ' + JSON.stringify(error));
+
+                                    },
+                                    dataType: 'json'
+                                });
+
+
+
+
+                                // Show a success message to your customer
+                                // There's a risk of the customer closing the window before callback
+                                // execution. Set up a webhook or plugin to listen for the
+                                // payment_intent.succeeded event that handles any business critical
+                                // post-payment actions.
+                            }
+                        }
+                    });
+
+                },
+                error: function (error) { alert('failure: ' + JSON.stringify(error)); },
+                contentType: "application/json",
+                dataType: 'json'
+            });
+
+
+
+        
+
+
+        });
+
+    </script>
+
+    
+    <script>
+        $('#discountCode').click(function () {
+            $(this).val('')
+            $(this).css('color', 'black');
+        })
+    </script>
+
+    <script>
+        function validateDiscountCode(discountCode) {
+            var re = /^[A-Za-z]+$/;
+            return re.test(discountCode);
+        }
+    </script>
+
+
+    <script>
+
+        var discountButton = document.querySelector('#discountButton');
+
+        discountButton.addEventListener('click', function (event) {
+            event.preventDefault();
+
+            var discountCode = $('#discountCode').val().trim();
+
+            if (!validateDiscountCode(discountCode)) {
+                alert('Невалиден код');
+            } else {
+                $.ajax({
+                    crossOrigin: false,
+                    type: 'GET',
+                    url: 'https://app.boomraid.bg/varbg/discount/' + discountCode.toLowerCase().trim(),
+                    success: function (result) {
+
+                        if (result.status == 'NO_SUCH_CODE') {
+                            $('#discountCode').val('Невалиден Код');
+                            $('#discountCode').css('color', 'red');
+                        }
+
+                        if (result.status == 'CODE_USED') {
+                            $('#discountCode').val('Използван Код');
+                            $('#discountCode').css('color', 'red');
+                        }
+
+                        if (result.status == 'OK') {
+                            $('#discountCode').val('-' + result.percentage + '% ' + discountCode.trim());
+                            $('#discountCode').css('color', 'green');
+                            $(discountButton).attr("disabled", true);
+                            $(discountButton).css("background-image", "linear-gradient(gray, gray)");
+
+                            var cityPrice = parseFloat(result.cityPrice);
+                            var percentage = parseFloat(result.percentage);
+                            var discountAmount = ((cityPrice * percentage) / 100).toFixed(2);
+                            var finalPrice = (cityPrice - discountAmount).toFixed(2);
+
+                            $('#discountAmount').html(discountAmount + ' Лева');
+                            $('#finalPrice').html(finalPrice + ' Лева');
+                            $('#button-text').html('Плати ' + finalPrice + ' Лева  <i class="fab fa-cc-stripe fa-lg"></i>');
+
+                            gamePrice = finalPrice;
+                            gameDiscountCode = discountCode;
+                        }
+                    },
+                    error: function (error) { alert('failure: ' + JSON.stringify(error)); },
+                    dataType: 'json'
+                });
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>

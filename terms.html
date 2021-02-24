@@ -1,0 +1,373 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <meta property="og:image" content="https://boomraid.bg/images/logo-02.jpg"/>
+    <meta property="og:url" content="https://boomraid.bg"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="BoomRaid&trade; Градска Приключенска Игра"/>
+    <meta property="og:description" content="Един град. Три часа. Осем скрити адски машини. Ще успееш ли?"/>
+    <title>BoomRaid&trade; градска приключенска игра, която предизвиква участниците да решават загадки</title>
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-165398260-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-165398260-1');
+        gtag('config', 'AW-1042091529');
+    </script>
+
+    <script src="https://browser.sentry-cdn.com/5.27.1/bundle.min.js" crossorigin="anonymous"></script>
+
+    <script>
+        Sentry.init({ dsn: 'https://76786958e492403e8f2eb763a6c0de2d@o423335.ingest.sentry.io/5353377'});
+    </script>
+
+
+    <script src="js/3.5.1_jquery.min.js"></script>
+    <script src="js/1.16.0_popper.min.js"></script>
+    <script src="js/4.19.1_mdb.min.js"></script>
+    <script src="js/4.5.0_bootstrap.min.js"></script>
+    <script src="js/material-components-web.min.js"></script>
+    <script src="js/1.19.2_jquery.validate.min.js"></script>
+    <script src="js/2.3.1_aos.js"></script>
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+
+
+
+
+    <!-- material design-->
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.12.0/css/mdb.min.css" />
+
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="images/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="images/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="images/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+
+    <link rel="mask-icon" href="images/favicons/safari-pinned-tab.svg" color="#F57F20">
+    <link rel="icon" href="images/favicons/favicon.ico">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Custom styles from Anna -->
+    <link href="css/start.css" rel="stylesheet">
+
+</head>
+<body  id="innerPage">
+
+<header class="header header-box-shadow-on-scroll header-abs-top header-bg-transparent header-show-hide" id="header">
+    <div class="header-section" data-aos="menu-area" data-aos-anchor-placement="bottom-top">
+
+        <div class="container" id="logoAndNav">
+
+            <nav class="navbar navbar-expand-lg" role="navigation">
+                <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navBar" aria-controls="navBar" aria-expanded="false" aria-label="Toggle navigation">
+                    <div id="nav-icon">
+                        <span></span><span></span><span></span>
+                    </div>
+                </button>
+
+                <a class="navbar-brand" href="index.html" style="padding:10px 0px 2px 0px;"><img border=0 src="images/logo.svg" height="100%"></a>
+
+
+                <div id="navBar" class="navbar-collapse">
+
+                    <div class="navbar-nav ml-auto">
+
+                        <ul class="navbar-nav">
+
+                            <li class="nav-item"><a href="faq.html">Често задавани въпроси</a></li>
+                            <li class="nav-item"><a href="contact.html">Контакти</a></li>
+                            <li class="nav-item dropdown">
+                                <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
+                                    Плати игра
+                                </a>
+                                <ul class="dropdown-menu dropdown-user">
+                                    <li>
+                                        <a href="sofia-payment.html">София</a>
+                                    </li>
+                                    <li>
+                                        <a href="plovdiv-payment.html">Пловдив</a>
+                                    </li>
+                                    <li>
+                                        <a href="varna-payment.html">Варна</a>
+                                    </li>
+                                    <li>
+                                        <a href="burgas-payment.html">Бургас</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+            </nav>
+        </div>
+    </div>
+
+
+
+
+
+</header>
+
+
+<main>
+    <div class="container">
+
+        <div class="row justify-content-center">
+            <div class="col-md-8 ">
+                <div class="card p-4 mb-6">
+                    <h2 class="mt-2">Условия за ползване</h2>
+
+
+                    <div class="text" id="terms">
+
+                        <strong>1. Платформа</strong><br><br>
+
+                        <p>1.1 Уебсайтът https://boomraid.bg и сайтовете, намиращи се на негови поддомейни, (наричани по-долу Уебсайтът), представляват интелектуална собственост на BoomRaid (наричан за краткост „Организатор”) и се управляват от същия.</p>
+
+                        <p>1.2 Организаторът е създател на игра с марката „BoomRaid” (наричана по-долу Игра и Услуга). BoomRaid е приключенска игра в която участниците решават поредица от загадки и се придвижват в градска среда.</p>
+
+                        <p>1.3 Всяко лице (Потребител), което достъпва Уебсайта, както и всяко лице, което ползва Услугите, предлагани от Организаторите (Участник), се съгласява с настоящите Общи условия на основание чл. 2.1 от същите.</p>
+
+                        <p>1.4 При тълкуването и прилагането на настоящите Общи условия, записаните с главна буква термини и изрази ще имат значението според дадената им в скоби първоначална дефиниция.</p>
+
+                        <p>1.5 Уебсайтът цели да информира интернет потребителите за Услугата на Организатора и да улеснява запитвания относно тях.</p>
+
+
+                        <strong>2. Използване на уебсайта</strong><br><br>
+
+                        <p>2.1 С всяко ползване на Услугата, включително с посещението на Уебсайта, както и чрез задействане на електронни препратки от началната или която и да е друга страница от Уебсайта, Потребителите и Участниците извършват електронно изявление по смисъла на Закона за електронния документ и електронните удостоверителни услуги, с което декларират, че са запознати с Общите условия, съгласяват се с тях и се задължават да ги спазват.</p>
+
+                        <p>2.2 Участниците проверяват сами за промени в Общите Условия на адрес https://boomraid.bg. Ако Общите Условия бъдат изменени след като Участник е заплатил за Игра, в отношенията му с Организаторите важат Общите Условия преди изменението им.</p>
+
+                        <p>2.3 Уебсайтът на Организатора цели да предостави актуализирана и точна информация за предлаганания продукт и услуга. Неговото ползване от Участниците може да бъде само за тази цел. Всяко използване, възпроизвеждане, промяна, предаване (по електронен или друг начин), публичен показ, извличане и повторно използване, и др. на част или на цялото съдържание, или на марката „BoomRaid“, без разрешението на Организаторa, е забранено и ще бъде преследвано по предвидения от законодателството ред.</p>
+
+                        <p>2.4 Участниците приемат, че Организаторa не носят отговорност за последиците, в т. ч. евентуални вреди, породени от или свързани по какъвто и да е начин с достъпа, употребата или невъзможността за употреба на Уебсайта.</p>
+
+                        <p>2.5 Уебсайтът може да съдържа препратки (hyperlinks) към други сайтове. Потребителите приемат, че Организаторите не носят отговорност за съдържанието на тези сайтове.</p>
+
+
+                        <strong>3. Заплащане</strong><br><br>
+
+                        <p>3.1 Цените на Услугата на Организатора са обявени и са публично достъпни на Уебсайта https://boomraid.bg.</p>
+
+                        <p>3.2 Цената на Услугата не зависи от броя Участници в един отбор. Броят на Участници в един отбор може да бъде неограничен. За максимално удовлетворение, Организаторът препоръчва не повече от 5 Участника в отбор.</p>
+
+                        <p>3.3 Плащането се извършва единствено през Уебсайта с кредитна/дебитна карта или с Paypal акаунт.</p>
+
+                        <p>3.4 След успешна покупка, Участникът бива автоматично пренасочен към старта на играта. Линк за старт на играта, както и разписка за плащането се изпращат и на посоченият от Участника емейл.</p>
+
+                        <p>3.5 Участникът може да стартира играта когато пожелае.</p>
+
+
+                        <strong>4. Рекламации</strong><br><br>
+                        <p>4.1 В срок от 15 дни след закупуване на Игра, ако тя не е стартирана от Участника, Участникът може да поиска пълно възстановяване на заплатената сума. В този случай Играта която не е стартирана се анулира от системата.</p>
+
+                        <p>4.2 В случай, че Участник реши две или по-малко загадки, може да поиска пълно възстановяване на заплатената сума за Играта, само в случай, че тя е закупена директно от този Уебсайт (https://boomraid.bg) или неговите поддомейни.</p>
+
+
+                        <strong>5. Безопасност</strong><br><br>
+                        <p>5.1 Участниците доброволно и по свое желание участват в Играта.</p>
+
+                        <p>5.2 Играта се провежда в градска среда, в област с нормален ежедневен автомобилен трафик.</p>
+
+                        <p>5.3 Участниците разбират рисковете и опасностите на градската среда които могат да доведат до лични наранявания, смърт, повреждане или загуба на имущество, в резултат на небрежност, предпоставки или улеснения от страна на Участниците.</p>
+
+                        <p>5.4 Организаторът не е отговорен за възникналите наранявания, щети или вреди на Учасниците в следствие на тяхното участие в Играта. Участниците са отговорни за всички свои действия или бездействия.</p>
+
+                        <p>5.5 Организаторът не е отговорен за щети или вреди причинени от Участниците на трети лица, предмети, сгради, паметници, обекти, субекти по време на Играта.</p>
+
+                        <p>5.6 В Играта могат да участват само лица, навършили 18-годишна възраст.</p>
+
+                        <p>5.7 Играта се провежда в градска условия които не са под контрола на огранизатора и могат да се променят по всяко време.</p>
+
+                        <p>5.8 Участниците могат да прекратят играта по всяко време когато пожелаят.</p>
+
+                        <p>5.9 Играта е свързана с определено физическо натоварване което изисква добро общо здравословно състояние и добра физическа подготовка.</p>
+
+                        <p>5.10 Участниците осъзнават и определят своите физически възможности и са в състояние да преценят кога да преустановят физическата си активност преди да настъпят нежелани последици.</p>
+
+                        <p>5.11 В Играта няма рискови или екстремни елементи. По време на играт трябва да се спазват същите правила и норми както при разходка в града.</p>
+
+                        <p>5.12 Всички места които се посещават при Играта са обществени. Не се изисква и не трябва да се навлиза или преминава през частна собственост.</p>
+
+
+                        <strong>6. Конфиденциалност</strong><br><br>
+                        <p>6.1 Всички загадки, методи, механика, изображения, видеа, аудио файове и всички останали артефакти в Играта са интелектуална собственост и принадлежат само и единствено на Организатора.</p>
+
+                        <p>6.2 Участниците се задължават да не разкриват никакви детайли от Играта (изброени в точка 6.1) директно или индиректно, чрез интернет, социални мрежи или по друг начин. Всяка информация относно Играта представлява търговска тайна и е конфиденциална.</p>
+
+                        <p>6.3 Играчите приемат да не възпроизвеждат загадките от Играта нито в непроменен вид, нито да ги заимстват след изменения.</p>
+
+                        <p>6.4 Организаторите са притежатели на търговска марка „BoomRaid“. Ползването на марката е възможно само с изричното писмено съгласие на Организаторите.</p>
+
+                        <p>6.5 Организаторите си запазват правото да предприемат правни действия срещу всяко лице, което извърши нарушение на права върху интелектуална собственост, притежание на Организаторите.</p>
+
+
+                        </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+
+</main>
+
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="row d-flex justify-content-between">
+            <div class="col-md-4">
+                <h4 class="pt-6">Кога ще излезе нещо ново...</h4><div class="textwidget custom-html-widget">
+                <div class="hs-newsletter">
+
+
+                    <div class="hbspt-form">
+                        <form novalidate="" accept-charset="UTF-8" action="" class="hs-form">
+                            <div class="inputholder md-form">
+                                <input type="email" class="form-control" id="youremail" value="" autocomplete="email">
+                                <label id="maillabel" for="youremail">Въведи мейл адрес</label>
+                                <input type="submit" value="Изпрати" id="subscribe" class="hs-button btn-primary">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <div id="footer-menus" class="col-md-8 pt-6 d-flex justify-content-end">
+                <div class="col-md-4">
+
+                    <h4 class="widget-title">За BoomRaid<sup>TM</sup></h4>
+                    <ul>
+                        <li><a href="faq.html">Често задавани въпроси</a></li>
+                        <li><a href="instructions.html">Правила на играта</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+
+                    <h4 class="widget-title">За нас</h4>
+                    <ul>
+                        <li><a href="about.html">Кои сме ние</a></li>
+                        <li><a href="contact.html">Контакти</a></li>
+                        <li><a href="https://www.facebook.com/BoomRaidBG"><i class="fab fa-facebook"></i></a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <div class="footer-bottom  pt-3 pb-3">
+        <div class="container d-flex justify-content-between">
+            <div class="copyright">
+
+                © 2021 Boomraid All rights reserved.
+
+            </div>
+            <div class="terms">
+                <a href="policy.html">Политика за лични данни</a> |
+                <a href="terms.html">Условия за ползване</a>
+
+            </div>
+        </div>
+    </div>
+    <!-- .site-info -->
+</footer>
+
+
+
+
+<script>
+
+
+    $(document).ready(function () {
+
+        $("#boomraid-contact").submit(function (event) {
+            // Stop the browser from submitting the form.
+            event.preventDefault();
+
+            var formData = $("#boomraid-contact").serialize();
+            $.ajax({
+                type: 'POST',
+                url: $("#boomraid-contact").attr('action'),
+                data: formData
+            }).done(function (response) {
+                $('#thanks').show();
+                $("#boomraid-contact").hide();
+
+                // Clear the form.
+                $('#fullname').val('');
+                $('#_replyto').val('');
+                $('#message').val('');
+            });
+        })
+
+    })
+</script>
+
+
+<script>
+    function validateEmail(email) {
+        var re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+        return re.test(email);
+    }
+</script>
+
+
+<script>
+    var subscribe = document.querySelector('#subscribe');
+
+    subscribe.addEventListener('click', function(event) {
+        event.preventDefault();
+
+        var email = $('#youremail').val().toLowerCase().trim();
+
+        if(!validateEmail(email)) {
+            alert('Невалиден адрес');
+        } else {
+            $.ajax({
+                crossOrigin: true,
+                type: 'POST',
+                url: "https://utils.boomraid.bg/email",
+                data: JSON.stringify ({email: email}),
+                success: function() {
+
+                    $(subscribe).attr("disabled", true);
+                    $(subscribe).css("background-image", "linear-gradient(gray, gray)");
+                    $('#youremail').val('').blur();
+                    $('#maillabel').html('Благодаря')
+                },
+                error: function(error) { alert('failure: ' + JSON.stringify(error)); },
+                contentType: "application/json",
+                dataType: 'json'
+            });
+        }
+    });
+</script>
+
+
+</body>
+</html>
