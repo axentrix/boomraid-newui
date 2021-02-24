@@ -1634,7 +1634,7 @@ table {
     align-items: center;
     color: @darkbg;
     font-size: 14px;
-
+    flex-wrap:wrap;
     .city-name {
         text-transform: uppercase;
         font-size: 12px;
@@ -1685,9 +1685,20 @@ table {
 
 
 @media (max-width:520px){
+    .payment-card {
+        .cityisland {
+            flex: 1 0 100%;
+            justify-content: center;
+            display: flex;
 
-    .cityisland .city-image{
-
-        width:120px;
+            .city-image {
+                width: 70%;
+                max-width: 100%;
+                align-self: center;
+            }
+        }
+    }
+    .cityisland .city-image {
+        width: 120px;
     }
 }
