@@ -40,6 +40,7 @@
     <script src="js/1.19.2_jquery.validate.min.js"></script>
     <script src="js/2.3.1_aos.js"></script>
 
+   
 
     <!-- material design-->
 
@@ -117,10 +118,15 @@
         <div class="row justify-content-center">
             <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
                 <div class="card darkbg p-3 mb-6">
-                    <h2 class="mt-2 d-inline-flex whitetitle">Твоето мнение е супер важно за нас</h2>
-
-                    <form id="survey">
-
+                  
+                    <div id="thanks" class="text-center thank-you">
+                        <h2 class="mt-2 d-inline-flex whitetitle">Благодарим за споделеното мнение</h2>
+                        <div class="d-flex d-column justify-content-center align-items-center">
+                            <img src="images/help_friend.svg" alt="помощ от приятел">
+                      Boomraid се стреми да направи твоето преживяване уникално. Ще продължим да работим в тази посока.</div>
+                    </div>
+                    <form id="survey" method="post" action="#" validate>
+                        <h2 class="mt-2 d-inline-flex whitetitle">Твоето мнение е супер важно за нас</h2>
                         <div class="question">
                           <p>Доволни ли сте от играта София - централна градска част?</p>
 
@@ -151,10 +157,10 @@
                     </div>
                         <div class="question" id="q2">
                           <p>Оставете своя коментар или препоръки</p>
-                         <textarea class="form-control"></textarea>
+                         <textarea class="form-control" id="comments" name="comments"></textarea>
                         </div>
                       
-                        <input type="submit" class="btn btn-primary w-100" value="ok" id="submit">
+                        <input type="submit" class="btn btn-primary w-100">
                       </form>
 
 
@@ -233,7 +239,7 @@
 </footer>
 
 
-
+   
 <script>
     function validateEmail(email) {
         var re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
@@ -243,8 +249,48 @@
 
 
 <script>
+ $(document).ready(function () {
+$("#survey").validate({
+                rules: {
+                    needs: {
+                        required: true
+                    },
+                   
+                    comments: {
+                        required: true
+                    }
 
+                },
+               messages: {
+                  
+                   needs:"Моля, ценете играта",
+                    comments: {
+                        required: "Моля, оставете коментар или препоръка",
+                     
+                    }
+                
+                },
+                submitHandler: function () {
+                  
+                    $.ajax({
+                        type: 'POST',
+                        url: $("#survey").attr('action'),
+                        data: $(form).serialize(),
 
+                        success: function (response) {
+                            alert("hie");
+                            $('#thanks').fadeIn();
+                            $("#survey").fadeOut();
+                            console.log(theRating);
+                            // Clear the form.
+                         
+                          
+                        }
+                 
+                  
+                    });
+                }
+            });
 
 
 $('label').hover(function(){
@@ -276,7 +322,7 @@ $('label').mouseout(function(){
 
    
     if (sibNumber < theNumber ) {
-       console.log("I  am smaller");
+     
     
     } 
   
@@ -291,7 +337,13 @@ $('label').mouseout(function(){
 
 $('input[type="radio"]').click(function(){
     var theNumber = $(this).attr('value');
-    
+    var theRating = $(this).attr('value');
+console.log(theRating);
+
+    $('input[type="radio"]').removeClass("rating");
+
+
+    $(this).addClass('rating');
   $(this).siblings('label').each(function() {
     var sibNumber = parseInt($(this).attr('for').slice(1));
 
@@ -337,6 +389,8 @@ $('input[type="radio"]').click(function(){
             });
         }
     });
+
+});
 </script>
 
 </body>
