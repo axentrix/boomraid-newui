@@ -3,15 +3,17 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-
+    <meta name="viewport" content="width=device-width">
     <meta property="og:image" content="https://boomraid.bg/images/logo-02.jpg"/>
     <meta property="og:url" content="https://boomraid.bg"/>
     <meta property="og:type" content="website"/>
     <meta property="og:title" content="BoomRaid&trade; Градска Приключенска Игра"/>
     <meta property="og:description" content="Един град. Три часа. Осем скрити адски машини. Ще успееш ли?"/>
     <title>BoomRaid&trade; градска приключенска игра, която предизвиква участниците да решават загадки</title>
+    <!-- Bootstrap core CSS -->
 
-    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
 
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-165398260-1"></script>
@@ -29,19 +31,14 @@
         Sentry.init({ dsn: 'https://76786958e492403e8f2eb763a6c0de2d@o423335.ingest.sentry.io/5353377'});
     </script>
 
+
     <script src="js/3.5.1_jquery.min.js"></script>
     <script src="js/1.16.0_popper.min.js"></script>
-    <script src="js/mdb.js"></script>
+    <script src="js/4.19.1_mdb.min.js"></script>
     <script src="js/4.5.0_bootstrap.min.js"></script>
     <script src="js/material-components-web.min.js"></script>
     <script src="js/1.19.2_jquery.validate.min.js"></script>
     <script src="js/2.3.1_aos.js"></script>
-
-
-    <!-- Bootstrap core CSS -->
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
 
 
     <!-- material design-->
@@ -66,7 +63,7 @@
     <link href="css/start.css" rel="stylesheet">
 
 </head>
-<body  id="innerPage_cities">
+<body  id="innerPage">
 
 <header class="header header-box-shadow-on-scroll header-abs-top header-bg-transparent header-show-hide" id="header">
     <div class="header-section" data-aos="menu-area" data-aos-anchor-placement="bottom-top">
@@ -110,6 +107,7 @@
 
 
 
+
 </header>
 
 
@@ -117,55 +115,55 @@
     <div class="container">
 
         <div class="row justify-content-center">
-            <div class="col-md-10">
-                <nav id="cities-nav"> 
-                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                        <a class="nav-item nav-link active" data-toggle="tab" href="#nav-sofia" role="tab" aria-controls="nav-home" aria-selected="true">София</a>
-                        <a class="nav-item nav-link" data-toggle="tab" href="#nav-plovdiv" role="tab" aria-controls="nav-profile" aria-selected="false">Пловдив</a>
-                        <a class="nav-item nav-link" data-toggle="tab" href="#nav-burgas" role="tab" aria-controls="nav-contact" aria-selected="false">Бургас</a>
-                        <a class="nav-item nav-link" data-toggle="tab" href="#nav-varna" role="tab" aria-controls="nav-contact" aria-selected="false">Варна</a>
+            <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
+                <div class="card darkbg p-3 mb-6">
+                    <h2 class="mt-2 d-inline-flex whitetitle">Твоето мнение е супер важно за нас</h2>
+
+                    <form id="survey">
+
+                        <div class="question">
+                          <p>Доволни ли сте от играта София - централна градска част?</p>
+
+<div  id="q1">
+                          <input type="radio" name="needs" id="a0" value="0">
+                          <label for="a0"></label>
+                          <input type="radio" name="needs" id="a1" value="1">
+                          <label for="a1"></label>
+                          <input type="radio" name="needs" id="a2" value="2">
+                          <label for="a2"></label>
+                          <input type="radio" name="needs" id="a3" value="3">
+                          <label for="a3"></label>
+                          <input type="radio" name="needs" id="a4" value="4">
+                          <label for="a4"></label>
+                          <input type="radio" name="needs" id="a5" value="5">
+                          <label for="a5"></label>
+                          <input type="radio" name="needs" id="a6" value="6">
+                          <label for="a6"></label>
+                          <input type="radio" name="needs" id="a7" value="7">
+                          <label for="a7"></label>
+                          <input type="radio" name="needs" id="a8" value="8">
+                          <label for="a8"></label>
+                          <input type="radio" name="needs" id="a9" value="9">
+                          <label for="a9"></label>
+                          <input type="radio" name="needs" id="a10" value="10">
+                          <label for="a10"></label>
+                        </div>
                     </div>
-                </nav>
-                <div class="tab-content " id="cities">
-                    <div class="tab-pane fade show active justify-content-center" id="nav-sofia" role="tabpanel">
-
-                        <div class="cityisland" id="sofia-center"><a href="#" class="text">Централна градска част</a><a href="#" class="city-image"><img src="images/illustrations/sofia.svg" /><div class="circle red"></div><div class="age red">18+</div></a></div>
-                        <div class="cityisland" id="borisova-gradina"><a href="#" class="text">Борисова градина</a><a href="#" class="city-image"><img src="images/illustrations/borisova_gradina.svg" /><div class="circle red"></div><div class="age red">18+</div></a></div>
-                        <div class="cityisland" id="borisova-gradina2"><a href="#" class="text">Борисова градина</a><a href="#" class="city-image"><img src="images/illustrations/borisova_gradina2.svg" /><div class="circle green"></div><div class="age green">12+</div></a></div>
-                        <div class="cityisland" id="zaimov"><a href="#" class="text">Парк "Заимов"</a><a href="#" class="city-image"><img src="images/illustrations/park_zaimov.svg" /><div class="circle green"></div><div class="age green">12+</div></a></div>
-
+                        <div class="question" id="q2">
+                          <p>Оставете своя коментар или препоръки</p>
+                         <textarea class="form-control"></textarea>
+                        </div>
+                      
+                        <input type="submit" class="btn btn-primary w-100" value="ok" id="submit">
+                      </form>
 
 
-                    </div>
-                    <div class="tab-pane fade justify-content-center" id="nav-plovdiv" role="tabpanel">
-                        <div class="cityisland" id="plovdiv"><a href="#" class="text">Централна част</a><a href="#" class="city-image"><img src="images/illustrations/plovdiv.svg" /><div class="circle red"></div><div class="age red">18+</div></a></div>
-                        <div class="cityisland" id="plovdiv2"><a href="#" class="text">Цар Симеонова градина</a><a href="#" class="city-image"><img src="images/illustrations/plovdiv2.svg" /><div class="circle green"></div><div class="age green">12+</div></a></div>
-
-
-                    </div>
-                    <div class="tab-pane fade justify-content-center" id="nav-burgas" role="tabpanel">
-
-                        <div class="cityisland" id="burgas"><a href="#" class="text">Централна част</a><a href="#" class="city-image"><img src="images/illustrations/bourgas.svg" /><div class="circle red"></div><div class="age red">18+</div></a></div>
-                        <div class="cityisland" id="burgas2"><a href="#" class="text">Очаквай скоро</a><a href="#" class="city-image"><img src="images/illustrations/comingsoon.svg" /><div class="circle green"></div><div class="age green">12+</div></a></div>
-
-
-
-                    </div>
-                    <div class="tab-pane fade justify-content-center" id="nav-varna" role="tabpanel">
-                        <div class="cityisland" id="varna"><a href="#" class="text">Централна част</a><a href="#" class="city-image"><img src="images/illustrations/varna.svg" /><div class="circle red"></div><div class="age red">18+</div></a></div>
-                        <div class="cityisland" id="varna2"><a href="#" class="text">Очаквай скоро</a><a href="#" class="city-image"><img src="images/illustrations/comingsoon.svg" /><div class="circle green"></div><div class="age green">12+</div></a></div>
-
-
-
-                    </div>
                 </div>
-
             </div>
+
         </div>
 
     </div>
-
-
 </main>
 
 
@@ -231,39 +229,9 @@
             </div>
         </div>
     </div>
-
-
     <!-- .site-info -->
 </footer>
 
-
-<script>
-
-
-    $(document).ready(function () {
-
-        $("#boomraid-contact").submit(function (event) {
-            // Stop the browser from submitting the form.
-            event.preventDefault();
-
-            var formData = $("#boomraid-contact").serialize();
-            $.ajax({
-                type: 'POST',
-                url: $("#boomraid-contact").attr('action'),
-                data: formData
-            }).done(function (response) {
-                $('#thanks').show();
-                $("#boomraid-contact").hide();
-
-                // Clear the form.
-                $('#fullname').val('');
-                $('#_replyto').val('');
-                $('#message').val('');
-            });
-        })
-
-    })
-</script>
 
 
 <script>
@@ -275,6 +243,72 @@
 
 
 <script>
+
+
+
+
+$('label').hover(function(){
+    $(this).addClass('on');
+    
+    var theNumber = $(this).prev().attr('value');
+  $(this).siblings('label').each(function() {
+    var sibNumber = parseInt($(this).attr('for').slice(1));
+
+   
+    if ((sibNumber < theNumber) || (sibNumber == theNumber)) {
+      
+      $(this).addClass('on');
+    } 
+  
+    
+    
+  
+  });
+});
+
+
+$('label').mouseout(function(){
+    
+    
+    var theNumber = $(this).prev().attr('value');
+  $(this).siblings('label').each(function() {
+    var sibNumber = parseInt($(this).attr('for').slice(1));
+
+   
+    if (sibNumber < theNumber ) {
+       console.log("I  am smaller");
+    
+    } 
+  
+    else{
+        $(this).removeClass('on');
+        $(this).siblings('label').removeClass('on');
+    }
+    
+  
+  });
+});
+
+$('input[type="radio"]').click(function(){
+    var theNumber = $(this).attr('value');
+    
+  $(this).siblings('label').each(function() {
+    var sibNumber = parseInt($(this).attr('for').slice(1));
+
+   
+    if (sibNumber <= theNumber) {
+       
+      $(this).addClass('onselected');
+    } 
+  
+    
+    
+    else {
+      $(this).removeClass('onselected');
+    }
+  });
+});
+
     var subscribe = document.querySelector('#subscribe');
 
     subscribe.addEventListener('click', function(event) {
