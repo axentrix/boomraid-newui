@@ -1,0 +1,576 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+
+    <meta property="og:image" content="https://boomraid.bg/images/logo-02.jpg"/>
+    <meta property="og:url" content="https://boomraid.bg"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="BoomRaid&trade; Градска Приключенска Игра"/>
+    <meta property="og:description" content="Един град. Три часа. Осем скрити адски машини. Ще успееш ли?"/>
+    <title>BoomRaid&trade; градска приключенска игра, която предизвиква участниците да решават загадки</title>
+
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+    crossorigin=""/>
+
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+     crossorigin=""></script>
+     <link href="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.css" rel='stylesheet' />
+     <script src="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.js"></script>
+     <script src="https://unpkg.com/@maplibre/maplibre-gl-leaflet@0.0.17/leaflet-maplibre-gl.js"></script>
+
+     <script src="https://cdn.jsdelivr.net/leaflet.markercluster/1.0.0-beta.2.0/leaflet.markercluster.js"></script>
+
+     
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-165398260-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-165398260-1');
+        gtag('config', 'AW-1042091529');
+    </script>
+
+    <script src="https://browser.sentry-cdn.com/5.27.1/bundle.min.js" crossorigin="anonymous"></script>
+
+    <script>
+        Sentry.init({ dsn: 'https://76786958e492403e8f2eb763a6c0de2d@o423335.ingest.sentry.io/5353377'});
+    </script>
+
+    <script src="js/3.5.1_jquery.min.js"></script>
+    <script src="js/1.16.0_popper.min.js"></script>
+    <script src="js/mdb.js"></script>
+    <script src="js/4.5.0_bootstrap.min.js"></script>
+    <script src="js/material-components-web.min.js"></script>
+    <script src="js/1.19.2_jquery.validate.min.js"></script>
+    <script src="js/2.3.1_aos.js"></script>
+
+
+    <!-- Bootstrap core CSS -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+
+
+    <!-- material design-->
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.12.0/css/mdb.min.css" />
+
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="images/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="images/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="images/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+
+    <link rel="mask-icon" href="images/favicons/safari-pinned-tab.svg" color="#F57F20">
+    <link rel="icon" href="images/favicons/favicon.ico">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Custom styles from Anna -->
+    <link href="css/start.css" rel="stylesheet">
+
+</head>
+<body  id="innerPage_cities">
+
+<header class="header header-box-shadow-on-scroll header-abs-top header-bg-transparent header-show-hide" id="header">
+    <div class="header-section" data-aos="menu-area" data-aos-anchor-placement="bottom-top">
+
+        <div class="container" id="logoAndNav">
+
+            <nav class="navbar navbar-expand-lg" role="navigation">
+                <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navBar" aria-controls="navBar" aria-expanded="false" aria-label="Toggle navigation">
+                    <div id="nav-icon">
+                        <span></span><span></span><span></span>
+                    </div>
+                </button>
+
+                <a class="navbar-brand" href="index.html" style="padding:10px 0px 2px 0px;"><img border=0 src="images/logo.svg" height="100%"></a>
+
+
+                <div id="navBar" class="navbar-collapse">
+
+                    <div class="navbar-nav ml-auto">
+
+                        <ul class="navbar-nav">
+
+                            <li class="nav-item"><a href="faq.html">Често задавани въпроси</a></li>
+                            <li class="nav-item"><a href="contact.html">Контакти</a></li>
+                            <li class="nav-item"><a href="game_cities.html">Примерни загадки</a></li>
+                          
+                        </ul>
+                    </div>
+                </div>
+<div class="navbar-nav" id="cta"><ul class="navbar-nav">  <li class="nav-item">
+    <a class="btn btn-special" href="payment.html">
+     Купи сега
+    </a>
+
+</li></ul></div>
+
+            </nav>
+        </div>
+    </div>
+
+
+
+
+</header>
+
+
+<main><div id="section-map">
+    <div id="map"></div>
+</div>
+
+</main>
+
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="row d-flex justify-content-between">
+            <div class="col-md-4">
+                <h4 class="pt-6">Кога ще излезе нещо ново...</h4><div class="textwidget custom-html-widget">
+                <div class="hs-newsletter">
+
+
+                    <div class="hbspt-form">
+                        <form novalidate="" accept-charset="UTF-8" action="" class="hs-form">
+                            <div class="inputholder md-form">
+                                <input type="email" class="form-control" id="youremail" value="" autocomplete="email">
+                                <label id="maillabel" for="youremail">Въведи мейл адрес</label>
+                                <input type="submit" value="Изпрати" id="subscribe" class="hs-button btn-primary">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <div id="footer-menus" class="col-md-8 pt-6 d-flex justify-content-end">
+                <div class="col-md-4">
+
+                    <h4 class="widget-title">За BoomRaid<sup>TM</sup></h4>
+                    <ul>
+                        <li><a href="faq.html">Често задавани въпроси</a></li>
+                        <li><a href="instructions.html">Правила на играта</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+
+                    <h4 class="widget-title">За нас</h4>
+                    <ul>
+                        <li><a href="about.html">Кои сме ние</a></li>
+                        <li><a href="contact.html">Контакти</a></li>
+                        <li><a href="https://www.facebook.com/BoomRaidBG"><i class="fab fa-facebook"></i></a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <div class="footer-bottom  pt-3 pb-3">
+        <div class="container d-flex justify-content-between">
+            <div class="copyright">
+
+                © 2021 Boomraid All rights reserved.
+
+            </div>
+            <div class="terms">
+                <a href="policy.html">Политика за лични данни</a> |
+                <a href="terms.html">Условия за ползване</a>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- .site-info -->
+</footer>
+
+
+<script>
+
+
+    $(document).ready(function () {
+
+        $("#boomraid-contact").submit(function (event) {
+            // Stop the browser from submitting the form.
+            event.preventDefault();
+
+            var formData = $("#boomraid-contact").serialize();
+            $.ajax({
+                type: 'POST',
+                url: $("#boomraid-contact").attr('action'),
+                data: formData
+            }).done(function (response) {
+                $('#thanks').show();
+                $("#boomraid-contact").hide();
+
+                // Clear the form.
+                $('#fullname').val('');
+                $('#_replyto').val('');
+                $('#message').val('');
+            });
+        })
+
+    })
+</script>
+
+
+<script>
+    function validateEmail(email) {
+        var re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+        return re.test(email);
+    }
+</script>
+
+
+<script>
+    var subscribe = document.querySelector('#subscribe');
+
+    subscribe.addEventListener('click', function(event) {
+        event.preventDefault();
+
+        var email = $('#youremail').val().toLowerCase().trim();
+
+        if(!validateEmail(email)) {
+            alert('Невалиден адрес');
+        } else {
+            $.ajax({
+                crossOrigin: true,
+                type: 'POST',
+                url: "https://utils.boomraid.bg/email",
+                data: JSON.stringify ({email: email}),
+                success: function() {
+
+                    $(subscribe).attr("disabled", true);
+                    $(subscribe).css("background-image", "linear-gradient(gray, gray)");
+                    $('#youremail').val('').blur();
+                    $('#maillabel').html('Благодаря')
+                },
+                error: function(error) { alert('failure: ' + JSON.stringify(error)); },
+                contentType: "application/json",
+                dataType: 'json'
+            });
+        }
+    });
+
+
+
+    jQuery(document).ready(function($) {
+
+        const key = '130eaJdFaR4aeirH1H6Z';
+      const map = L.map('map').setView([42.69477, 23.32285], 8);
+      const gl = L.maplibreGL({
+        attribution: "",
+       
+        style: `https://api.maptiler.com/maps/f158d467-c4df-4b33-a163-1270599672c5/style.json?key=${key}`,
+        minZoom: 0,
+	maxZoom: 18,
+      }).addTo(map);
+
+      map._layersMaxZoom = 19;
+
+var ticon = L.Icon.extend({
+  options: {
+     
+      iconSize:     [250, 250],
+      
+      iconAnchor:   [125, 94],
+     
+      popupAnchor:  [8, -76]
+  }
+});
+var myIcon = new ticon({iconUrl: 'images/markers/borisova_gradina.png'});
+
+
+
+  // specify popup options 
+  var customOptions =
+      {
+      'maxWidth': '200',
+      'className' : 'custom'
+      }
+
+
+/*L.marker(coordinates1, {icon: myIcon}).addTo(map).bindPopup(address1, customOptions);
+L.marker(coordinates2, {icon: myIcon}).addTo(map).bindPopup(address2, customOptions);
+
+*/
+var stations = {
+"type": "FeatureCollection",
+"features": [{
+
+ "type": "Feature",
+  "properties": {
+    "country":"България",
+"city":"София",
+ "title": "Борисова градина",
+ "icon": "images/markers/borisova_gradina.png",
+ "image": "images/markers/bgradina1.jpg"
+},
+  "geometry": {
+"type": "Point",
+
+ "coordinates": [42.6790303,23.3340895]
+
+  }},
+
+  {
+
+"type": "Feature",
+ "properties": {
+   "country":"България",
+"city":"София",
+"title": "Борисова градина 2",
+"icon": "images/markers/borisova_gradina1.png",
+"image": "images/markers/bgradina2.jpg"
+},
+ "geometry": {
+"type": "Point",
+
+"coordinates": [42.6831861,23.340655]
+
+ }},
+
+ {
+
+"type": "Feature",
+ "properties": {
+   "country":"България",
+"city":"София",
+"title": "Парк Заимов",
+"icon": "images/markers/zaimov.png",
+"image": "images/markers/zaimov.jpg"
+},
+ "geometry": {
+"type": "Point",
+
+"coordinates": [42.6975078,23.3402487]
+
+ }},
+
+ {
+
+"type": "Feature",
+ "properties": {
+   "country":"България",
+"city":"София",
+"title": "Площад Славейков",
+"icon": "images/markers/sofia-center.png",
+"image": "images/markers/slaveykov.jpg"
+},
+ "geometry": {
+"type": "Point",
+
+"coordinates": [42.6967819,23.3223169]
+
+ }},
+ { 
+ "type": "Feature",
+ "properties": {
+   "country":"България",
+"city":"София",
+"title": "Градска градина",
+"icon": "images/markers/sofia-center2.png",
+"image": "images/markers/ggradina.jpg"
+},
+ "geometry": {
+"type": "Point",
+
+"coordinates": [42.6917819,23.3223169]
+
+ }},
+
+ { 
+ "type": "Feature",
+ "properties": {
+   "country":"България",
+"city":"Русе",
+"title": "Паметник на свободата",
+"icon": "images/markers/rousse.png",
+"image": "images/markers/rousse.jpg"
+},
+ "geometry": {
+"type": "Point",
+
+"coordinates": [43.8487221,25.9512114]
+
+ }},
+ { 
+ "type": "Feature",
+ "properties": {
+   "country":"България",
+"city":"Бургас",
+"title": "Централна градска част",
+"icon": "images/markers/bourgas.png",
+"image": "images/markers/burgas.jpg"
+},
+ "geometry": {
+"type": "Point",
+
+"coordinates": [42.4962397,27.4653448]
+
+ }},
+ { 
+ "type": "Feature",
+ "properties": {
+   "country":"България",
+"city":"Варна",
+"title": "Централна градска част",
+"icon": "images/markers/varna.png",
+"image": "images/markers/varna.jpg"
+},
+ "geometry": {
+"type": "Point",
+
+"coordinates": [43.2093161,27.9032295]
+
+ }},
+ { 
+ "type": "Feature",
+ "properties": {
+   "country":"България",
+"city":"Пловдив",
+"title": "Централна градска част",
+"icon": "images/markers/plovdiv.png",
+"image": "images/markers/plovdiv.jpg"
+},
+ "geometry": {
+"type": "Point",
+
+"coordinates": [42.1499404,24.74633]
+
+ }},
+ 
+]
+
+
+};
+
+
+
+L.geoJSON(stations, {
+  coordsToLatLng: function (coords) {
+      //                    latitude , longitude, altitude
+      //return new L.LatLng(coords[1], coords[0], coords[2]); //Normal behavior
+      return new L.LatLng(coords[0], coords[1], coords[2]);
+  }
+});
+
+var markerLayer = L.geoJson(stations, {
+  
+coordsToLatLng: function (coords) {
+      //                    latitude , longitude, altitude
+      //return new L.LatLng(coords[1], coords[0], coords[2]); //Normal behavior
+      return new L.LatLng(coords[0], coords[1], coords[2]);
+  },
+  onEachFeature: function (feature, layer)
+  {
+    var myIcon = new ticon({iconUrl: feature.properties.icon});
+    
+    layer.setIcon(myIcon);
+      layer.bindPopup("<h4>" + feature.properties.title + "</h4>" +
+  "<div class='leaflet-address'><div class='leaflet-image'><img src='"+ feature.properties.image +"'></div>" + feature.properties.city+"</div>");
+  }
+});
+
+var markerCluster = L.markerClusterGroup({
+
+    disableClusteringAtZoom: 13,
+    spiderfyOnMaxZoom:false
+});
+markerCluster.addLayer(markerLayer);
+map.addLayer(markerCluster);
+
+map.fitBounds(markerLayer.getBounds());
+//console.log(markerLayer.getBounds());
+
+
+var selector = L.control({
+position: 'topright'
+});
+
+
+
+
+
+
+
+
+selector.onAdd = function(map) {
+var div = L.DomUtil.create('div', 'mySelector');
+div.innerHTML = '<select id="marker_select"><option value="init">Select...</option></select>';
+return div;
+};
+
+selector.addTo(map);
+
+
+
+markerLayer.eachLayer(function(layer) {
+var optionElement = document.createElement("option");
+optionElement.innerHTML = layer.feature.properties.city+", "+layer.feature.properties.title;
+optionElement.value = layer._leaflet_id;
+
+L.DomUtil.get("marker_select").appendChild(optionElement);
+
+
+
+});
+
+var marker_select = L.DomUtil.get("marker_select");
+L.DomEvent.addListener(marker_select, 'click', function(e) {
+L.DomEvent.stopPropagation(e);
+
+
+
+
+
+});
+L.DomEvent.addListener(marker_select, 'change', changeHandler);
+
+
+function changeHandler(e) {
+    
+   
+
+
+
+
+if (e.target.value == "init") {
+  map.closePopup();
+} else {       
+    
+    
+    var latLng = markerLayer.getLayer(e.target.value).getLatLng();
+console.log(latLng);
+
+   // map.panTo(latLng);
+   map.setView(latLng, 14);
+   //markerLayer.getLayer(e.target.value).zoomToBounds();
+   
+  markerLayer.getLayer(e.target.value).openPopup();
+}
+}
+
+});
+
+
+
+</script>
+
+</body>
+</html>
