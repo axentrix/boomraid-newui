@@ -1887,6 +1887,19 @@ table h4 {
     width: 120px;
   }
 }
+#cities {
+  align-items: flex-start;
+}
+.cityisland {
+  margin: 4px;
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 45%;
+  flex: 1 0 45%;
+  max-height: 300px;
+}
 .btn-special {
   border: solid 2px #ffffff;
   color: #ff3107;
