@@ -1655,49 +1655,61 @@ table h4 {
 }
 #cities {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
   min-height: 300px;
 }
 .cityisland {
-  margin-left: 15px;
-  margin-right: 15px;
+  margin: 4px;
   position: relative;
   display: inline-flex;
   flex-direction: column;
-  max-height: 200px;
-  animation: action 1.6s ease-out infinite alternate;
+  align-items: center;
+  max-width: 280px;
+  flex: 1 0 23%;
+  transition: all 0.2s;
+  /*animation: action 1.6s ease-out infinite alternate;*/
+  background: #120e265e;
+  padding: 12px;
+  border-radius: 12px;
+}
+.cityisland:hover {
+  background: #f7951e1f;
 }
 .cityisland .text {
-  display: inline-flex;
-  position: absolute;
+  position: relative;
   z-index: 500;
-  box-shadow: 0 0 0.875rem 0 #354052;
-  background: #ffffff;
+  text-align: center;
+  order: 2;
   border-radius: 10px 10px 10px 2px;
   padding: 5px;
-  color: #2b2470;
+  color: #ffffff;
   font-weight: 500;
   font-size: 15px;
-  transition: all 0.2s;
-}
-.cityisland .text:hover {
-  transform: scale(1.1, 1.1);
-  background: #fab61c;
-  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .cityisland .city-image {
-  display: inline-flex;
+  display: flex;
   min-height: 200px;
   justify-content: center;
   align-items: center;
-  width: 200px;
   transition: all 0.2s;
+  position: relative;
 }
 .cityisland .city-image img {
   width: 100%;
 }
 .cityisland .city-image:hover {
   transform: scale(1.1, 1.1);
+}
+.cityisland .city-span {
+  flex: 100%;
+  display: flex;
+  font-size: 14px;
+  color: #f7941e;
+  text-align: center;
 }
 .cityisland .circle {
   border-radius: 50%;
@@ -1710,11 +1722,11 @@ table h4 {
   justify-content: center;
   align-items: center;
   font-size: 14px;
-  bottom: 40px;
+  bottom: 0px;
   left: 30px;
 }
 .cityisland .age {
-  bottom: 40px;
+  bottom: 0px;
   left: 30px;
   border-radius: 50%;
   width: 30px;
@@ -1804,14 +1816,9 @@ table h4 {
   animation-delay: 0.3s;
   animation-duration: 2.2s;
 }
-#plovdiv,
-#plovdiv2,
-#burgas,
-#varna2,
-#burgas2,
-#varna {
-  flex: 0;
-}
+/*#plovdiv, #plovdiv2, #burgas, #varna2, #burgas2, #varna {
+    flex: 0;
+}*/
 .card .cityisland {
   animation: none;
 }
